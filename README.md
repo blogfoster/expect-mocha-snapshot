@@ -14,8 +14,8 @@ const toMatchSnapshot = require("expect-mocha-snapshot");
 
 expect.extend({ toMatchSnapshot });
 
-describe("foo", () => {
-  it("matches the snapshot", () => {
+describe("foo", function() {
+  it("matches the snapshot", function() {
     expect({ foo: "bar" }).toMatchSnapshot(this);
   });
 });
