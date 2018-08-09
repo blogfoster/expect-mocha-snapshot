@@ -1,7 +1,7 @@
 const jestSnapshot = require("jest-snapshot");
 const expect = require("expect");
 
-module.exports = function toMatchSnapshot(mochaContext) {
+module.exports = function toMatchSnapshot(mochaContext, name) {
   if (!mochaContext || !mochaContext.test) {
     throw new Error(
       "Missing `mochaContext` argument for .toMatchSnapshot().\n" +
@@ -20,7 +20,7 @@ module.exports = function toMatchSnapshot(mochaContext) {
     currentTestName: makeTestTitle(test)
   });
 
-  const result = matcher(this.actual);
+  const result = matcher(this.actual, name);
   snapshotState.save();
 
   expect.assert(result.pass, !result.pass ? result.report() : "");
