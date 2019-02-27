@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Extended toMatchSnapshot does not match the snapshot 1`] = `
+Object {
+  "foo": "bar",
+}
+`;
+
+exports[`Extended toMatchSnapshot matches the snapshot 1`] = `
+Object {
+  "foo": "bar",
+}
+`;
