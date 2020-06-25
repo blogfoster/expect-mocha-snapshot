@@ -11,7 +11,12 @@ module.exports = function toMatchSnapshot(received, mochaContext, name) {
 
   const { test } = mochaContext;
 
-  const snapshotState = new jestSnapshot.SnapshotState(test.file, {
+
+  const snapshotResolver = jestSnapshot.buildSnapshotResolver({ rootDir: 'test' })
+
+  const snapshotFile = snapshotResolver.resolveSnapshotPath(test.file)
+
+  const snapshotState = new jestSnapshot.SnapshotState(snapshotFile, {
     updateSnapshot: process.env.SNAPSHOT_UPDATE ? "all" : "new"
   });
 
@@ -20,7 +25,9 @@ module.exports = function toMatchSnapshot(received, mochaContext, name) {
     currentTestName: makeTestTitle(test)
   });
 
-  const result = matcher(received, name);
+  const result = matcher(received, name || '');
+
+
   snapshotState.save();
 
   return result
