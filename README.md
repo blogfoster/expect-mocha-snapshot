@@ -34,8 +34,8 @@ SNAPSHOT_UPDATE=true mocha
 ```
 ## Compatibility
 
-compatibility with `expect` and `jest-snapshot` is a moving target.
-the last version is compatible with "expect": "^26.1.0", "jest-snapshot": "^26.1.0" and "mocha": "^8.0.1"
+Compatibility with `expect` and `jest-snapshot` is a moving target.
+The last version has been tested with "expect": "^26.1.0", "jest-snapshot": "^26.1.0" and "mocha": "^8.0.1"
 
 ## License
 
