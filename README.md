@@ -32,6 +32,10 @@ If your tests are failing and you want to update the snapshot, use the environme
 ```sh
 SNAPSHOT_UPDATE=true mocha
 ```
+## Compatibility
+
+Compatibility with `expect` and `jest-snapshot` is a moving target.
+The last version has been tested with "expect": "^26.1.0", "jest-snapshot": "^26.1.0" and "mocha": "^8.0.1"
 
 ## License
 
