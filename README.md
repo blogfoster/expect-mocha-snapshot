@@ -9,14 +9,14 @@ All credit goes to [Alexander Beletsky](https://github.com/alexbeletsky). See hi
 ## Usage
 
 ```js
-const expect = require("expect");
-const toMatchSnapshot = require("expect-mocha-snapshot");
+const expect = require('expect');
+const toMatchSnapshot = require('expect-mocha-snapshot');
 
 expect.extend({ toMatchSnapshot });
 
-describe("foo", function() {
-  it("matches the snapshot", function() {
-    expect({ foo: "bar" }).toMatchSnapshot(this);
+describe('foo', function () {
+  it('matches the snapshot', function () {
+    expect({ foo: 'bar' }).toMatchSnapshot(this);
   });
 });
 ```
@@ -32,10 +32,11 @@ If your tests are failing and you want to update the snapshot, use the environme
 ```sh
 SNAPSHOT_UPDATE=true mocha
 ```
+
 ## Compatibility
 
 Compatibility with `expect` and `jest-snapshot` is a moving target.
-The last version has been tested with "expect": "^26.1.0", "jest-snapshot": "^26.1.0" and "mocha": "^8.0.1"
+The `2.x` has been tested with "expect": "^26.1.0", "jest-snapshot": "^26.1.0" and "mocha": "^8.0.1"
 
 ## License
 
