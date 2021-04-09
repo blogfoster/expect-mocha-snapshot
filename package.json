@@ -1,6 +1,6 @@
 {
   "name": "expect-mocha-snapshot",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "peerDependencies": {
     "expect": "1.20.x"
   },
