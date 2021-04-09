@@ -4,7 +4,7 @@
 
 The module uses [`jest-snapshot`](https://github.com/facebook/jest/tree/master/packages/jest-snapshot) under the hood and works as an extension to [`expect@1.20.x`](https://github.com/mjackson/expect) to enable snapshot-testing in [`mocha`](https://github.com/mochajs/mocha).
 
-All credit goes to [Alexander Beletsky](https://github.com/alexbeletsky). See his blog post about [snapshot-testing in Mocha here](https://medium.com/blogfoster-engineering/how-to-use-the-power-of-jests-snapshot-testing-without-using-jest-eff3239154e5).
+See the blog post about [snapshot-testing in Mocha here](https://medium.com/blogfoster-engineering/how-to-use-the-power-of-jests-snapshot-testing-without-using-jest-eff3239154e5).
 
 ## Usage
 
