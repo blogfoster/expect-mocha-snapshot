@@ -1,7 +1,7 @@
 const jestSnapshot = require('jest-snapshot');
 const expect = require('expect');
 
-module.exports = function toMatchSnapshot(received, mochaContext, name) {
+function toMatchSnapshot(received, mochaContext, name) {
   if (!mochaContext || !mochaContext.test) {
     throw new Error(
       'Missing `mochaContext` argument for .toMatchSnapshot().\n' +
@@ -50,3 +50,14 @@ function makeTestTitle(test) {
 
   return title.reverse().join(' ');
 }
+
+const mochaHooks = {
+  beforeAll() {
+    expect.extend({ toMatchSnapshot });
+  }
+};
+
+module.exports = {
+  toMatchSnapshot,
+  mochaHooks
+};
