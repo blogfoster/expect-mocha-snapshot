@@ -4,6 +4,10 @@
   "peerDependencies": {
     "expect": "1.20.x"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blogfoster/expect-mocha-snapshot.git"
+  },
   "dependencies": {
     "expect": "^1.20.2",
     "jest-snapshot": "^26.1.0"
