@@ -57,7 +57,6 @@ const mochaHooks = {
   }
 };
 
-module.exports = {
-  toMatchSnapshot,
-  mochaHooks
-};
+module.exports = toMatchSnapshot;
+module.exports.toMatchSnapshot = toMatchSnapshot;
+module.exports.mochaHooks = mochaHooks;
